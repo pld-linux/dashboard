@@ -1,0 +1,19 @@
+--- backends/BeagleBackend.cs.orig	2004-06-28 10:32:35.000000000 +0200
++++ backends/BeagleBackend.cs	2004-08-13 15:33:09.438683232 +0200
+@@ -13,6 +13,7 @@
+ using System.Collections;
+ 
+ using Gnome;
++using Beagle.Core;
+ using Beagle;
+ 
+ [assembly:Dashboard.BackendFactory ("Dashboard.BeagleBackend")]
+@@ -101,7 +102,7 @@
+ 
+ 				string clue_text = clue.Text.ToLower ();
+ 
+-				Query query = new Query (clue_text);
++				Beagle.Core.Query query = new Beagle.Core.Query (clue_text);
+ 				QueryResult results = queryDriver.Query (query);
+ 				
+ 				// Wait for all results to come back before
