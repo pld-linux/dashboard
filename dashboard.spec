@@ -11,7 +11,7 @@ Source0:	%{name}-cvs-%{cvsrel}.tar.gz
 URL:		http://www.nat.org/dashboard/
 BuildRequires:	at-spi-devel
 BuildRequires:	autoconf
-BuilDRequires:	automake
+BuildRequires:	automake
 BuildRequires:	gtk-sharp-devel
 BuildRequires:	libtool
 BuildRequires:	mono
