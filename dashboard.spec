@@ -1,4 +1,4 @@
-%define	cvsrel	20040620
+%define	cvsrel	20040813
 Summary:	GNOME Dashboard
 Summary(pl):	Dashboard dla GNOME
 Name:		dashboard
@@ -7,7 +7,8 @@ Release:	0.%{cvsrel}.1
 License:	GPL?
 Group:		Applications/Utilities
 Source0:	%{name}-%{version}-%{cvsrel}.tar.bz2
-# Source0-md5:	2a4e39c567dd59d5bfc3ba5cbba5a65f
+# Source0-md5:	51a6f10eee27d9c452e956c0d8cf20e5
+Patch0:		%{name}-BeagleBackend.patch
 URL:		http://www.nat.org/dashboard/
 BuildRequires:	at-spi-devel
 BuildRequires:	autoconf
@@ -47,6 +48,7 @@ czynno¶ciami i wy¶wietliæ je w przyjazny sposób.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %{__libtoolize}
@@ -67,6 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog HACKING MAINTAINERS README
+%doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/%{name}
