@@ -7,7 +7,7 @@ Release:	0.%{cvsrel}.1
 License:	GPL?
 Group:		Applications/Utilities
 Source0:	%{name}-%{version}-%{cvsrel}.tar.bz2
-# Source0-md5:	e9b1c069d01ae5898bc032109df5408f
+# Source0-md5:	2a4e39c567dd59d5bfc3ba5cbba5a65f
 URL:		http://www.nat.org/dashboard/
 BuildRequires:	at-spi-devel
 BuildRequires:	autoconf
