@@ -14,7 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	beagle-devel
 BuildRequires:	dotnet-evolution-sharp >= 0.3
-BuildRequires:	gtk-sharp-devel
+BuildRequires:	dotnet-gtk-sharp-devel
 BuildRequires:	libtool
 BuildRequires:	mono
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
