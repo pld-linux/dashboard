@@ -1,5 +1,5 @@
-%define cvsrel 20030909
-Summary:	Gnome Dashboard
+%define	cvsrel	20030909
+Summary:	GNOME Dashboard
 Name:		dashboard
 Version:	0.0
 Release:	0.%{cvsrel}.1
@@ -14,7 +14,7 @@ BuildRequires:	at-spi-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Gnome Dashboard
+GNOME Dashboard.
 
 %prep
 %setup -q -n %{name}
