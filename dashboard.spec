@@ -1,5 +1,6 @@
 %define	cvsrel	20030909
 Summary:	GNOME Dashboard
+Summary(pl):	Dashboard dla GNOME
 Name:		dashboard
 Version:	0.0
 Release:	0.%{cvsrel}.1
@@ -8,29 +9,48 @@ Group:		Applications/Utilities
 Source0:	%{name}-cvs-%{cvsrel}.tar.gz
 # Source0-md5:	e9b1c069d01ae5898bc032109df5408f
 URL:		http://www.nat.org/dashboard/
-BuildRequires:	mono
-BuildRequires:	gtk-sharp-devel
 BuildRequires:	at-spi-devel
+BuildRequires:	autoconf
+BuilDRequires:	automake
+BuildRequires:	gtk-sharp-devel
+BuildRequires:	libtool
+BuildRequires:	mono
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GNOME Dashboard.
+The dashboard is a piece of software which performs a continous,
+automatic search of your personal information space to show you things
+in your life that are related to whatever you happen to be doing with
+your computer at the time.
+
+While you read email, browse the web, write a document, or talk to
+your friends on IM, dashboard does its best to proactively find
+objects that are relevant to your current activity, and to display
+them in a friendly way.
+
+%description -l pl
+Dashboard to program, który wykonuje ci±g³e, automatyczne
+przeszukiwanie osobistej przestrzeni informacyjnej u¿ytkownika, aby
+pokazaæ rzeczy w ¿yciu zwi±zane z tym, co robi siê na komputerze.
+
+Podczas czytania poczty elektronicznej, przegl±dania stron WWW,
+pisania dokumentów lub rozmawiania z przyjació³mi przez komunikatory
+Dashboard próbuje jak najlepiej znale¼æ obiekty powi±zane z bie¿±cymi
+czynno¶ciami i wy¶wietliæ je w przyjazny sposób.
 
 %prep
 %setup -q -n %{name}
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
-%{__libtoolize}
 %{__automake}
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
-#install -d $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
