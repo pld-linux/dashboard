@@ -1,17 +1,19 @@
-%define	cvsrel	20030909
+%define	cvsrel	20040620
 Summary:	GNOME Dashboard
 Summary(pl):	Dashboard dla GNOME
 Name:		dashboard
-Version:	0.0
+Version:	0.1
 Release:	0.%{cvsrel}.1
 License:	GPL?
 Group:		Applications/Utilities
-Source0:	%{name}-cvs-%{cvsrel}.tar.gz
+Source0:	%{name}-%{version}-%{cvsrel}.tar.bz2
 # Source0-md5:	e9b1c069d01ae5898bc032109df5408f
 URL:		http://www.nat.org/dashboard/
 BuildRequires:	at-spi-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	beagle-devel
+BuildRequires:	dotnet-evolution-sharp >= 0.3
 BuildRequires:	gtk-sharp-devel
 BuildRequires:	libtool
 BuildRequires:	mono
@@ -39,7 +41,7 @@ Dashboard próbuje jak najlepiej znale¼æ obiekty powi±zane z bie¿±cymi
 czynno¶ciami i wy¶wietliæ je w przyjazny sposób.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %{__libtoolize}
@@ -60,6 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS CREDITS ChangeLog NEWS README THANKS TODO
+%doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
+%{_libdir}/%{name}
