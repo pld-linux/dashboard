@@ -4,7 +4,7 @@ Summary(pl):	Dashboard dla GNOME
 Name:		dashboard
 Version:	0.1
 Release:	0.%{cvsrel}.1
-License:	GPL?
+License:	GPL (?)
 Group:		Applications/Utilities
 Source0:	%{name}-%{version}-%{cvsrel}.tar.bz2
 # Source0-md5:	51a6f10eee27d9c452e956c0d8cf20e5
