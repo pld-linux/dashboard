@@ -13,10 +13,15 @@ BuildRequires:	at-spi-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	beagle-devel
-BuildRequires:	dotnet-evolution-sharp >= 0.3
-BuildRequires:	dotnet-gtk-sharp-devel
+BuildRequires:	dotnet-evolution-sharp-devel >= 0.3
+BuildRequires:	dotnet-gtk-sharp-devel >= 0.10
 BuildRequires:	libtool
 BuildRequires:	mono
+BuildRequires:	mono-csharp
+BuildRequires:	pkgconfig
+Requires:	beagle
+Requires:	dotnet-evolution-sharp >= 0.3
+Requires:	dotnet-gtk-sharp >= 0.10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -62,6 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README
+%doc AUTHORS ChangeLog HACKING MAINTAINERS README
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/%{name}
