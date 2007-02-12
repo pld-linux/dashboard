@@ -1,6 +1,6 @@
 %define	cvsrel	20040813
 Summary:	GNOME Dashboard
-Summary(pl):	Dashboard dla GNOME
+Summary(pl.UTF-8):   Dashboard dla GNOME
 Name:		dashboard
 Version:	0.1
 Release:	0.%{cvsrel}.1
@@ -36,15 +36,15 @@ your friends on IM, dashboard does its best to proactively find
 objects that are relevant to your current activity, and to display
 them in a friendly way.
 
-%description -l pl
-Dashboard to program, który wykonuje ci±g³e, automatyczne
-przeszukiwanie osobistej przestrzeni informacyjnej u¿ytkownika, aby
-pokazaæ rzeczy w ¿yciu zwi±zane z tym, co robi siê na komputerze.
+%description -l pl.UTF-8
+Dashboard to program, ktÃ³ry wykonuje ciÄ…gÅ‚e, automatyczne
+przeszukiwanie osobistej przestrzeni informacyjnej uÅ¼ytkownika, aby
+pokazaÄ‡ rzeczy w Å¼yciu zwiÄ…zane z tym, co robi siÄ™ na komputerze.
 
-Podczas czytania poczty elektronicznej, przegl±dania stron WWW,
-pisania dokumentów lub rozmawiania z przyjació³mi przez komunikatory
-Dashboard próbuje jak najlepiej znale¼æ obiekty powi±zane z bie¿±cymi
-czynno¶ciami i wy¶wietliæ je w przyjazny sposób.
+Podczas czytania poczty elektronicznej, przeglÄ…dania stron WWW,
+pisania dokumentÃ³w lub rozmawiania z przyjaciÃ³Å‚mi przez komunikatory
+Dashboard prÃ³buje jak najlepiej znaleÅºÄ‡ obiekty powiÄ…zane z bieÅ¼Ä…cymi
+czynnoÅ›ciami i wyÅ›wietliÄ‡ je w przyjazny sposÃ³b.
 
 %prep
 %setup -q
