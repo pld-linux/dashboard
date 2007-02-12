@@ -1,6 +1,6 @@
 %define	cvsrel	20040813
 Summary:	GNOME Dashboard
-Summary(pl.UTF-8):   Dashboard dla GNOME
+Summary(pl.UTF-8):	Dashboard dla GNOME
 Name:		dashboard
 Version:	0.1
 Release:	0.%{cvsrel}.1
